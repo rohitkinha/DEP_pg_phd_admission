@@ -33,6 +33,7 @@ import Templates from "./components/Admin/Templates";
 import MeetTheTeam from "./components/Landing/MeetTheTeam";
 import Archive from "./components/Admin/Archive";
 import HowToUseAdmin from "./components/Admin/HowToUseAdmin";
+import ApplyProcess from "./components/Applicant/ApplyProcess";
 
 function App() {
   // Pages that can only be accessed if you are logged in
@@ -81,6 +82,14 @@ function App() {
           element={
             <PrivateRoute>
               <MyApplications />
+            </PrivateRoute>
+          }
+        />
+        <Route
+          path="/apply-process"
+          element={
+            <PrivateRoute>
+              <ApplyProcess/>
             </PrivateRoute>
           }
         />

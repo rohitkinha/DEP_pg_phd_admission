@@ -32,7 +32,7 @@ function MyApplications(props) {
         }
       })
       .catch((err) => console.log(err));
-  }, []);
+  }, [navigate]);
 
   return (
     <>

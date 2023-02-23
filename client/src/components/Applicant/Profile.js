@@ -203,7 +203,7 @@ export default function Profile() {
         }
       })
       .catch((err) => console.log(err));
-  }, []);
+  }, [convert2dArrayToJsonObjectArray, navigate]);
 
   const handleLocalChange = (event, key) => {
     let copy = { ...localProfileInfo };

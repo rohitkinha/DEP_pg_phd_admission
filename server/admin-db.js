@@ -1008,7 +1008,7 @@ const unpublish_all_results = async (req, res) => {
     const results = await pool.query(
       "UPDATE mtech_offerings_" +
         cycle_id +
-        " SET is_result_published_by_faculty = 0, is_result_published=0"
+        " SET is_result_published_by_faculty = 0"
     );
   }
 

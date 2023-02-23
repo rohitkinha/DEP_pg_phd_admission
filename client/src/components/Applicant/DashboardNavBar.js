@@ -12,6 +12,7 @@ const navigation = [
   { name: "Home", to: "/home", id: 1 },
   { name: "My Applications", to: "/my-applications", id: 2 },
   { name: "My Profile", to: "/my-profile", id: 3 },
+  { name: "Apply Process", to: "/apply-process", id: 4 },
 ];
 
 function classNames(...classes) {
@@ -37,7 +38,7 @@ function DashboardNavBar(props) {
         }
       })
       .catch((err) => console.log(err));
-  }, []);
+  }, [navigate]);
 
   return (
     <>
@@ -105,16 +106,16 @@ function DashboardNavBar(props) {
                       </Link>
 
                       <Link
-                        key="My Applications"
-                        to="/my-applications"
+                        key="Apply Process"
+                        to="/apply-process"
                         className={classNames(
-                          1 === props.currentFlag
+                          3 === props.currentFlag
                             ? "bg-gray-900 text-white"
                             : "text-gray-300 hover:bg-gray-700 hover:text-white",
                           "px-3 py-2 rounded-md text-sm font-medium"
                         )}
                         aria-current={
-                          1 === props.currentFlag ? "page" : undefined
+                          3 === props.currentFlag ? "page" : undefined
                         }
                       >
                         How to Apply
